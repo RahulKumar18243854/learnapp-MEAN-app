@@ -1,0 +1,26 @@
+<div class="container bg-light p-5">
+	<div class="row ms-3">
+		<div class="col-6 justify-content-center p-5 border shadow">
+			<h3>Enter your contacts and massage:</h3>
+			<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+				<input type="text" name="fn" class="form-control mt-3" placeholder="First Name" ngModel required #fn="ngModel">
+				<span *ngIf="!fn.valid" class="text-danger">*First Name is Required</span>
+				<input type="text" name="ln" class="form-control mt-3" placeholder="last Name" ngModel required #ln="ngModel">
+				<span *ngIf="!ln.valid" class="text-danger">*Last Name is Required</span>
+				<input type="email" name="em" class="form-control mt-3" placeholder="Email Id" ngModel required #em="ngModel">
+				<span *ngIf="!em.valid" class="text-danger">*Email Id is Required</span>
+				<input type="text" name="sub" class="form-control mt-3" placeholder="Subject" ngModel >
+				<textarea name="msg" class="form-control mt-3" placeholder="Enter your massage" ngModel ></textarea>
+				<button class="btn btn-success mt-3">Submit</button>
+			</form>
+<table class="table mt-4" *ngIf="result">
+	<tr><th>Name</th><td>{{contactForm.value.fn}} {{contactForm.value.ln}}</td></tr>
+	<tr><th>Contact</th><td>{{contactForm.value.em}} {{contactForm.value.ph}}</td></tr>
+
+</table>
+
+
+		</div>
+	</div>
+	
+</div>

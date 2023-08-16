@@ -1,0 +1,20 @@
+cd learnapp
+ng serve
+
+
+
+
+open your browser on http://localhost:4200/
+
+
+
+
+
+
+page ek = components anek
+//appcomponent ko chalya
+
+
+
+main->appmodule->appcomponent
+appcomponent=appcomponent.ts

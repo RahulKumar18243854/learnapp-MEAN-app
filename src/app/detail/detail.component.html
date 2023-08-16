@@ -1,0 +1,15 @@
+
+
+<p>Result : <span *ngIf="marks>40">Pass</span><span *ngIf="marks<40">Fail</span></p>
+
+<p *ngIf="marks>50 || subjects=='maths'">Selected for new batch</p> 
+<p *ngIf="marks>50 && subjects=='maths'">Selected for new batch</p>
+
+<table class="table w-50">
+	<tr><th>Course</th><td>{{course}}</td></tr>
+	<tr><th>fee</th><td>{{fee}}</td></tr>
+	<tr><th>Duration</th><td>{{duration}}</td></tr>
+
+</table>
+
+

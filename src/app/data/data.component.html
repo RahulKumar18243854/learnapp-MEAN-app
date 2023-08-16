@@ -1,0 +1,20 @@
+<!-- |:pipe -->
+<button class="btn btn-success mb-3 pe-5 ps-5 pb-3 pt-3" (click)="showHide()">
+	<span class="fs-4">show/hide</span></button>
+<h2>No of New Batches: {{courses.length}}</h2>
+
+<div *ngIf="flag">
+<table class="table table-bordered table-striped table-hover">
+	<tr *ngFor="let c of courses">
+		<td class="tc"><img class=" shadow m-3" [src]="c.image"></td>
+		<td class="fw-bold">{{c.title | uppercase}}</td>
+		<td class="text-success">{{c.fee | currency:'INR'}}</td>
+		<td>{{c.duration | number:'2.2'}}</td>
+		<td class="text-warning">{{c.sdate | date:'longDate'}}</td>
+		<td><a [routerLink]="['/form',c.title]">Apply</a></td>
+		<td><a [routerLink]="['/info',c.title,c.fee,c.duration]">Apply</a></td>
+	</tr>
+</table>
+</div>
+
+<p>Managed By {{fname|slice:0:1}}{{lname|slice:0:1| uppercase}}</p>
